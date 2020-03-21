@@ -3,6 +3,6 @@
  * leftovers-again. No edits necessary.
  */
 import LeftoversAgain from 'leftovers-again';
-import DeepIndigo from './bot';
+import {{Repo}} from './bot';
 import metadata from '../package.json';
-LeftoversAgain.start(metadata, DeepIndigo);
+LeftoversAgain.start(metadata, {{Repo}});
