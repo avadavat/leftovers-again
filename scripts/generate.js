@@ -17,7 +17,7 @@ const formatsWithTeams = ['gen7anythinggoes',
 // formats without teams, plus the above
 const formats = ['gen7randombattle'].concat(formatsWithTeams);
 
-const languages = ['nodejs', 'typescript'];
+const languages = ['typescript', 'nodejs'];
 
 /**
  * Try to 'require' stuff without crashing out
