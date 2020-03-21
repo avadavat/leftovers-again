@@ -65,6 +65,10 @@ class Challenger {
    * @param  {Set} users The users set.
    */
   challengeSomeone(users = this.users) {
+    // NOTE(jbadlato): This is to convert an empty object to an empty set
+    if (users.size === undefined) {
+      users = new Set();
+    }
     this.users = users;
     if (!this.scrappy) return; // only scrappy users can issue challenges
     if (updateTimeout) return;
