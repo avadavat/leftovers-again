@@ -48,10 +48,11 @@ This software has been used for college-level game AI courses, where classes hav
 
 ## Write in Any Language You Want
 
-This project is mainly coded in Javascrpt / ES6, which I recommend for its ease of use. However, you can write code in any language you want.
+This project is mainly coded in Javascript / ES6, which I recommend for its ease of use. However, you can write code in any language you want, as long as it's Javascript or Typescript.
 
 Languages currently supported:
-- jk nothing else yet
+- Javascript
+- Typescript
 
 
 ## Example Usage
