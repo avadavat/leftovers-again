@@ -17,7 +17,7 @@ const formatsWithTeams = ['gen7anythinggoes',
 // formats without teams, plus the above
 const formats = ['gen7randombattle'].concat(formatsWithTeams);
 
-const languages = ['nodejs'];
+const languages = ['typescript', 'nodejs'];
 
 /**
  * Try to 'require' stuff without crashing out
@@ -74,23 +74,18 @@ const questions = [
     name: 'Repo',
     message: 'What is your bot\'s name? (Capitalized, no spaces)',
     default: existingPackage.name || 'Terminator',
-    filter: (str) => {
-      return str.replace(/\W/g, '').replace(/^./, (match) => {
-        return match.toUpperCase();
-      });
-    }
-  }, {
+    filter: (str) => str.replace(/\W/g, '').replace(/^./, (match) => match.toUpperCase())
+  },
+  {
     name: 'description',
     message: 'Write a description for your bot (optional)',
     default: existingPackage.description || 'the very best',
-    filter: (str) => {
-      return str.replace(/\"/g, '');
-    }
+    filter: (str) => str.replace(/\"/g, '')
   },
   {
     name: 'format',
     message: 'What battle format are you writing for? (The main difference being, '
-    + 'whether your team is predetermined or random.)',
+      + 'whether your team is predetermined or random.)',
     type: 'list',
     choices: formats
   },
@@ -173,7 +168,7 @@ inquirer.prompt(questions).then((answers) => {
     answers.team = true;
   }
 
-  const lang = 'nodejs';
+  const { lang } = answers;
   // @TODO this goes to tmp but should eventually go to 'bots'
   // const folder = 'bots/' + answers.repo;
   // fs.mkdirSync(folder);
